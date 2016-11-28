@@ -38,7 +38,9 @@ class Site extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->view('header');
+        $this->load->view('leftnav');
         $this->load->view('site');
+        $this->load->view('rightnav');
         $this->load->view('footer');
     }
 
@@ -46,7 +48,9 @@ class Site extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->view('header');
+        $this->load->view('leftnav');
         $this->load->view('developers');
+        $this->load->view('rightnav');
         $this->load->view('footer');
     }
 
@@ -54,7 +58,10 @@ class Site extends CI_Controller {
     {
         $this->load->helper('url');
         $this->load->view('header');
+        $this->load->view('leftnav');
         $this->load->view('employers');
+        $this->load->view('rightnav');
         $this->load->view('footer');
     }
+
 }
