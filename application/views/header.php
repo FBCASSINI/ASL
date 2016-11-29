@@ -56,7 +56,7 @@
         class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
-    <form class="modal-content animate" action="action_page.php">
+    <form class="modal-content animate" method="post" action="<?php echo base_url();?>index.php/users/insert_user_db">
         <img class="monster-form-img" src="<?php echo base_url()?>assets/img/monstercode2.png" alt="Green Monster Mascot" style="width:600px;height:100px;">
         <div class="form-group">
             <label>Email address</label>
@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
             <label>Password:</label>
-            <input type="password" class="form-control" id="pwd" name="pw" required>
+            <input type="password" class="form-control" id="pwd" name="pwd" required>
         </div>
         <div class="checkbox">
             <label><input type="checkbox">Remember me</label>
@@ -82,7 +82,7 @@
 <div id="id02" class="modal">
   <span onclick="document.getElementById('id02').style.display='none'"
         class="close" title="Close Modal">&times;</span>
-    <form class="modal-content animate" action="action_page.php">
+    <form class="modal-content animate" action="<?php echo base_url();?>index.php/users/insert_user_db">
         <img class="monster-form-img" src="<?php echo base_url()?>assets/img/monstercode2.png" alt="Green Monster Mascot" style="width:600px;height:100px;">
         <div class="form-group">
             <label>Email Adress: </label>
@@ -90,19 +90,19 @@
         </div>
         <div class="form-group">
             <label>First Name: </label>
-            <input type="email" class="form-control" id="fname" name="fname" required>
+            <input type="email" class="form-control" id="firstname" name="firstname" required>
         </div>
         <div class="form-group">
             <label>Last Name: </label>
-            <input type="email" class="form-control" id="lname" name="lname" required>
+            <input type="email" class="form-control" id="lastname" name="lastname" required>
         </div>
         <div class="form-group">
             <label>Password:</label>
-            <input type="password" class="form-control" id="pwd" name="pw" required>
+            <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <div class="form-group">
             <label>Repaeat Password:</label>
-            <input type="password" class="form-control" id="pwd" name="pw" required>
+            <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
 

@@ -8,17 +8,18 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Site extends CI_Controller {
+class Site extends CI_Controller
+{
 
 
     /**
      * Index Page for this controller.
      *
      * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
+     *        http://example.com/index.php/welcome
+     *    - or -
+     *        http://example.com/index.php/welcome/index
+     *    - or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
@@ -34,6 +35,7 @@ class Site extends CI_Controller {
         $this->load->view('footer');
 
     }
+
     public function sites()
     {
         $this->load->helper('url');
@@ -64,4 +66,42 @@ class Site extends CI_Controller {
         $this->load->view('footer');
     }
 
+
 }
+
+
+/*
+
+    public function add_form()
+
+    {
+
+        $this->load->view('insert');
+    }
+
+    public function insert_new_user(){
+
+
+
+
+        $udata['email'] = $this->input->post('email');
+
+        $udata['fname'] = $this->input->post('fname');
+
+        $udata['lname'] = $this->input->post('lname');
+
+        $udata['pwd'] = $this->input->post('pwd');
+
+        $res = $this->users_model->insert_users_to_db($udata);
+
+        if($res){
+
+            header('location:'.base_url()."index.php".$this->index());
+
+        }
+
+    }
+
+
+}
+*/
