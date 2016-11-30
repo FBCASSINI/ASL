@@ -30,8 +30,10 @@ class Site extends CI_Controller
     public function index()
     {
         $this->load->helper('url');
+        $this->load->helper('form');
         $this->load->view('header');
         $this->load->view('home');
+        $this->load->view('main');
         $this->load->view('footer');
 
     }
@@ -39,10 +41,12 @@ class Site extends CI_Controller
     public function sites()
     {
         $this->load->helper('url');
+        $this->load->helper('form');
         $this->load->view('header');
         $this->load->view('leftnav');
         $this->load->view('site');
         $this->load->view('rightnav');
+        $this->load->view('main');
         $this->load->view('footer');
     }
 
@@ -67,41 +71,25 @@ class Site extends CI_Controller
     }
 
 
-}
-
-
-/*
-
-    public function add_form()
-
+    public function main()
     {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->view('leftnav');
+        $this->load->view('employers');
 
-        $this->load->view('insert');
+        $this->load->view('main');
+        $this->load->view('footer');
     }
 
-    public function insert_new_user(){
+    public function __construct(){
+        parent::__construct();
+        $this->load->helper('form');
+        $this->load->library(array('session', 'form_validation'));
+
+}
 
 
-
-
-        $udata['email'] = $this->input->post('email');
-
-        $udata['fname'] = $this->input->post('fname');
-
-        $udata['lname'] = $this->input->post('lname');
-
-        $udata['pwd'] = $this->input->post('pwd');
-
-        $res = $this->users_model->insert_users_to_db($udata);
-
-        if($res){
-
-            header('location:'.base_url()."index.php".$this->index());
-
-        }
-
-    }
 
 
 }
-*/
