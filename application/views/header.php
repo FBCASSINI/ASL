@@ -84,15 +84,16 @@
 <div id="id02" class="modal">
   <span onclick="document.getElementById('id02').style.display='none'"
         class="close" title="Close Modal">&times;</span>
-    <form class="modal-content animate" method="post" action="<?php echo base_url();?>">
-        <?php $attributes = array("name" => "signupform");
+    <form class="modal-content animate" method="post" action="<?php echo site_url('Signup/index');?>">
 
-			?>
+
+
+
         <img class="monster-form-img" src="<?php echo base_url()?>assets/img/monstercode2.png" alt="Green Monster Mascot" style="width:600px;height:100px;">
         <div class="form-group">
 
             <label for="firstname" class="control-label">First Name:</label>
-            <input class="form-control" name="firstname" placeholder="Your First Name" type="text" value="<?php echo set_value(':firstname'); ?>" />
+            <input class="form-control" name="firstname" placeholder="Your First Name" type="text" value="<?php echo set_value('firstname'); ?>" />
         </div>
         <div class="form-group">
             <label>Lastname: </label>
@@ -104,17 +105,17 @@
         </div>
         <div class="form-group">
             <label>Password:</label>
-            <input id="password" name="password" placeholder="password" type="text" class="form-control"  value="<?php echo set_value('password'); ?>" />
+            <input id="password" name="password" placeholder="password" type="password" class="form-control" />
         </div>
         <div class="form-group">
             <label>Repaeat Password:</label>
-            <input id="password" name="password" placeholder="password" type="text" class="form-control"  value="<?php echo set_value('password'); ?>" />
+            <input id="cpassword" name="cpassword" placeholder="password" type="password" class="form-control" />
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
 
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
         <span class="psw">Forgot <a href="#">password?</a></span>
-    </form>
+     </form>
 </div>
 
 

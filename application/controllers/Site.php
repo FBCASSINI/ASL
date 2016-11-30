@@ -32,8 +32,7 @@ class Site extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->view('header');
-        $this->load->view('home');
-        $this->load->view('main');
+        $this->load->view('home');;
         $this->load->view('footer');
 
     }
@@ -46,7 +45,6 @@ class Site extends CI_Controller
         $this->load->view('leftnav');
         $this->load->view('site');
         $this->load->view('rightnav');
-        $this->load->view('main');
         $this->load->view('footer');
     }
 

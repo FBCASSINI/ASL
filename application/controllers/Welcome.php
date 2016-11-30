@@ -23,3 +23,15 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 }
+
+
+<?php
+    $attributes = array("class" => "form-horizontal", "id" => "signupform", "name" => "signupform");
+    echo form_open("Signup/index", $attributes);?>
+<fieldset>
+
+
+    <div class="form-group">
+        <div class="row colbox">
+
+            <div class="col-lg-4 col-sm-4">
