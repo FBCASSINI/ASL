@@ -56,15 +56,15 @@
         class="close" title="Close Modal">&times;</span>
 
     <!-- Modal Content ---->
-    <form class="modal-content animate" method="post" action="<?php echo base_url();?>">
+    <form class="modal-content animate" method="post" action="<?php echo site_url('Login/index');?>">
         <img class="monster-form-img" src="<?php echo base_url()?>assets/img/monstercode2.png" alt="Green Monster Mascot" style="width:600px;height:100px;">
         <div class="form-group">
-            <label>Email address</label>
-            <input type="email" class="form-control" id="email" name="email" required>
+            <label>Email Address</label>
+            <input class="form-control" name="email" id="email" placeholder="Enter Email Address" type="text" value="<?php echo set_value('email'); ?>" />
         </div>
         <div class="form-group">
-            <label>Password:</label>
-            <input type="password" class="form-control" id="pwd" name="pwd" required>
+            <label>Password</label>
+            <input class="form-control" name="password" placeholder="Password" type="password" value="<?php echo set_value('password'); ?>" />
         </div>
         <div class="checkbox">
             <label><input type="checkbox">Remember me</label>

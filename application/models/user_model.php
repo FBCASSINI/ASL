@@ -10,7 +10,7 @@ class user_model extends CI_Model
 	function get_user($email, $password)
 	{
 		$this->db->where('email', $email);
-		$this->db->where('password', md5($password));
+		$this->db->where('password', $password);
         $query = $this->db->get('user');
 		return $query->result();
 	}

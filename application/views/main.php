@@ -6,7 +6,6 @@
  * Time: 12:06 PM
  */
 
-session_start();
 
 
 

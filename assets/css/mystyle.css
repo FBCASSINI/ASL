@@ -78,7 +78,7 @@ footer {
         .row.content {height:auto;}
         .right {  position: absolute; left: 50px;}
     }
-}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -222,3 +222,4 @@ header.carousel .fill {
 
     border-radius: 5px;
 }
+

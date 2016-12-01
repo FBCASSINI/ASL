@@ -85,7 +85,17 @@ class Site extends CI_Controller
         $this->load->helper('form');
         $this->load->library(array('session', 'form_validation'));
 
-}
+    }
+    public function login()
+    {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->view('login_view');
+        $this->load->view('leftnav');
+
+        $this->load->view('main');
+        $this->load->view('footer');
+    }
 
 
 
