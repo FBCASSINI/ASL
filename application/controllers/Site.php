@@ -80,12 +80,14 @@ class Site extends CI_Controller
         $this->load->view('footer');
     }
 
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         $this->load->helper('form');
         $this->load->library(array('session', 'form_validation'));
 
     }
+
     public function login()
     {
         $this->load->helper('url');
@@ -97,7 +99,14 @@ class Site extends CI_Controller
         $this->load->view('footer');
     }
 
+    public function profile_view()
+    {
+        $this->load->helper('url');
+        $this->load->view('header');
+        $this->load->view('profile_view');
+        $this->load->view('leftnav');
+        $this->load->view('footer');
 
 
-
+    }
 }

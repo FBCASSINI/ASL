@@ -13,3 +13,24 @@ window.onclick = function(event) {
         }
     }
 
+
+
+function show_confirm(act,gotoid)
+
+{
+    if(act=="edit")
+
+    var r=confirm("Do you really want to edit?");
+
+else
+
+    var r=confirm("Do you really want to delete?");
+
+    if (r==true)
+    {
+
+        window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
+
+    }
+}
+

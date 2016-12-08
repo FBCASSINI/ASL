@@ -31,6 +31,7 @@ class login extends CI_Controller
             if (count($uresult) > 0)
             {
                 // set session
+                //var_dump($uresult);
                 $sess_data = array('login' => TRUE, 'uname' => $uresult[0]->firstname, 'uid' => $uresult[0]->id);
                 $this->session->set_userdata($sess_data);
                 redirect("Profile/index");
@@ -38,7 +39,7 @@ class login extends CI_Controller
             else
             {
                 $this->session->set_flashdata('msg', '<div class="alert alert-danger text-center">Wrong Email-ID or Password!</div>');
-                redirect('login/index');
+                redirect('site/index');
             }
         }
     }

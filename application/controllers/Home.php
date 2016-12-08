@@ -14,11 +14,13 @@ class home extends CI_Controller
         parent::__construct();
         $this->load->helper(array('url', 'html'));
         $this->load->library('session');
+        $this->load->helper('url');
     }
 
     function index()
+
     {
-        $this->load->view('home_view');
+
     }
 
     function logout()
@@ -27,7 +29,7 @@ class home extends CI_Controller
         $data = array('login' => '', 'uname' => '', 'uid' => '');
         $this->session->unset_userdata($data);
         $this->session->sess_destroy();
-        redirect('home/index');
+        redirect('Site/index');
     }
 }
 ?>
