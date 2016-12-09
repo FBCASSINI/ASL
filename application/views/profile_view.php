@@ -5,7 +5,6 @@
  * Date: 12/7/16
  * Time: 9:13 PM
  */
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,8 +58,16 @@
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <div class="well">
-                <p>User Picture <br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+                <p>User Picture <br/><br/>
+                    <?php if(isset($upload_data['file_name'])){ ?>
+                        <img alt="Your uploaded image" src="<?=base_url(). 'assets/img/' . $upload_data['file_name'];?>"  style='width:200px'">
+                    <?php } ?>
+                    <br/><br/><br/></p>
             </div>
+            <?php echo form_open_multipart('profile/do_upload'); ?>
+            <?php echo form_upload('userfile'); ?><br />
+            <?php echo form_submit('upload', 'Upload');?>
+            <?php echo form_close(); ?>
             <div class="well">
                 <p>User Info<br/> Name: <?php echo $uname; ?><br/> Email: <?php echo $uemail; ?> <br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
             </div>
@@ -74,8 +81,7 @@
                         <h4>Profile Summary</h4>
                         <hr/>
                         <form method="post" action="<?php echo site_url('profile/update');?>">
-                        <p>Name: <input type="text" name='name'value="<?php echo $uname; ?>"></p>
-                        <p>Email:  <input type="text" name='email' value="<?php echo $uemail; ?>"></p>
+                            <p>Email:  <input type="text" name='email' value="<?php echo $uemail; ?>"></p>
                             <button type="submit" class="btn btn-default">Update</button>
                         </form>
                         <form method="post" action="<?php echo site_url('profile/delete');?>">

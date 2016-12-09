@@ -22,7 +22,7 @@ class login extends CI_Controller
         if ($this->form_validation->run() == FALSE)
         {
             // validation fail
-            $this->load->view('login_view');
+            $this->load->view('');
         }
         else
         {
