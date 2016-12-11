@@ -1,17 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class user_model extends CI_Model
+class User_model extends CI_Model
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function get_user($email, $password, $image)
+    function get_user($email, $password)
     {
         $this->db->where('email', $email);
         $this->db->where('password', $password);
-        $this->db->where('image', $image);
         $query = $this->db->get('user');
         /* Select * from users where email = $_Post['email'] and password = $_post['password'] */
         return $query->result();
@@ -50,10 +49,33 @@ class user_model extends CI_Model
 
     }
 
-    function add_image($uimage, $id){
+    function add_image($uimage, $id)
+    {
         $this->db->where('id', $id);
         $this->db->set('image', $uimage);
         $this->db->update('user');
+    }
+
+    function update_password($upass, $id)
+    {
+        $this->db->where('id', $id);
+        $this->db->set('password', $upass);
+        $this->db->update('user');
+    }
+
+    function company($cuname, $id)
+    {
+        $this->db->where('id', $id);
+        $this->db->set('company', $cuname);
+        $this->db->update('user');
+    }
+
+    function getPosts(){
+        $this->db->select("id", "company", "salary");
+        $this->db->where("id", "20");
+        $this->db->from('user');
+        $query = $this->db->get();
+        return $query->result();
     }
 
 }

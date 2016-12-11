@@ -60,6 +60,7 @@ class Site extends CI_Controller
 
     public function employers()
     {
+        $this->load->helper('form');
         $this->load->helper('url');
         $this->load->view('header');
         $this->load->view('leftnav');

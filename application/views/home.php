@@ -63,10 +63,16 @@ Job Openings
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i>PHP Developer - Boca Raton, Florida</h4>
+                        <h4><i class="fa fa-fw fa-check">
+                                <?php $this->db->where('id', '20');
+                            //here we select every clolumn of the table
+                            $q = $this->db->get('user');
+                            $data = $q->result_array();
+
+                            echo($data[0]['company']). '  | Salary: ' . ($data[0]['salary']);?></h4>
                     </div>
                     <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                        <p><?php echo($data[0]['comment']);?> <br/><br/> phone: <?php echo($data[0]['phone']. ' |  Email:  ' . $data[0]['email']);?></p>
                         <a href="#" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
