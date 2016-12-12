@@ -41,6 +41,7 @@
                 <li><a href="<?php echo site_url('Site/sites')?>">Projects</a></li>
                 <li><a href="<?php echo site_url('Site/developers')?>">Developers</a></li>
                 <li><a href="<?php echo site_url('Site/employers')?>">Employers</a></li>
+                <li><a href="<?php echo base_url('index.php/user_authentication/')?>">Employers</a></li>
                 <li><a href="#">Contact</a></li>
                 <li class="right nav navbar-nav navbar-right"><button class="btn btn-default glyphicon glyphicon-log-in" onclick="document.getElementById('id01').style.display='block'"> Login</button></li>
                 <li class="right nav navbar-nav navbar-right"><button class="btn btn-default glyphicon glyphicon-log-in" onclick="document.getElementById('id02').style.display='block'"> Register</button></li>

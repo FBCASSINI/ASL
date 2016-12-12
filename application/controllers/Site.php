@@ -110,4 +110,16 @@ class Site extends CI_Controller
 
 
     }
+
+    public function auth()
+    {
+        $this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->library(array('session', 'form_validation'));
+
+
+        $this->load->view('user_authentication/index');
+
+
+    }
 }
