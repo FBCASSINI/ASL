@@ -49,13 +49,13 @@ class User_Authentication extends CI_Controller
 			$fbuser = '';
             $data['authUrl'] = $facebook->getLoginUrl(array('redirect_uri'=>$redirectUrl,'scope'=>$fbPermissions));
         }
-		$this->load->view('user_authentication/index.php', $data);
+		$this->load->view('user_authentication/index', $data);
     }
 	
 	public function logout() {
 		$this->session->unset_userdata('userData');
         $this->session->sess_destroy();
-		redirect('http://localhost/index.php/user_authentication');
+		redirect('site/index');
     }
 }
 

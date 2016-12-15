@@ -28,34 +28,32 @@ color:#999999;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 }
+
+.img1{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+
+.img2 {
+    position: absolute;
+    top: 10%;
+    left: 39%;
+}
 .fb_box .image{ text-align:center;}
 </style>
 </head>
 <body>
+
 <?php
 if(!empty($authUrl)) {
-	echo '<a href="'.$authUrl.'"><img src="'.base_url().'assets/images/flogin.png" alt=""/></a>';
+    echo '<a href="'.$authUrl.'"><img class="img2" src="'.base_url().'assets/img/facebook-avatar.jpg" alt="" width="400" height="400"/></a>';
+	echo '<a href="'.$authUrl.'"><img class="img1" src="'.base_url().'assets/img/flogin.png" alt=""/></a>';
 }else{
+    $this->load->view('test');
 
-?>
-<div class="wrapper">
-    <h1>Facebook Profile Details </h1>
-    <?php
-    echo '<div class="welcome_txt">Welcome <b>'.$userData['first_name'].'</b></div>';
-    echo '<div class="fb_box">';
-    echo '<p class="image"><img src="'.$userData['picture_url'].'" alt="" width="300" height="220"/></p>';
-    echo '<p><b>Facebook ID : </b>' . $userData['oauth_uid'].'</p>';
-    echo '<p><b>Name : </b>' . $userData['first_name'].' '.$userData['last_name'].'</p>';
-    echo '<p><b>Email : </b>' . $userData['email'].'</p>';
-    echo '<p><b>Gender : </b>' . $userData['gender'].'</p>';
-    echo '<p><b>Locale : </b>' . $userData['locale'].'</p>';
-    echo '<p><b>FB Profile Link : </b>' . $userData['profile_url'].'</p>';
-    echo '<p><b>You are login with : </b>Facebook</p>';
-    echo '<p><b>Logout from <a href="'.site_url().'/user_authentication/logout">Facebook</a></b></p>';
-    echo '</div>';
-    ?>
-</div>
-<?php }?>
+ }?>
 
 
 </body>

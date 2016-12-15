@@ -216,7 +216,8 @@ Job Openings
                     <p>Join our community of professionals to find leading developers or find leading jobs in the industry.</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">Register</a>
+                   <a class="btn btn-lg btn-default btn-block" href="#">Register</a>
+
                 </div>
             </div>
         </div>
